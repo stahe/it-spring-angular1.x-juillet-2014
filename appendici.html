@@ -1,0 +1,864 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Esempio client-server - AngularJS 1.x / Spring 4">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/it-spring-angular1.x-juillet-2014/appendici.html">
+      
+      
+        <link rel="prev" href="conclusione.html">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>6. Appendici - Esempio client-server - AngularJS 1.x / Spring 4</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "Esempio client-server - AngularJS 1.x / Spring 4";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#6-appendici" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Esempio client-server - AngularJS 1.x / Spring 4" class="md-header__button md-logo" aria-label="Esempio client-server - AngularJS 1.x / Spring 4" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Esempio client-server - AngularJS 1.x / Spring 4
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              6. Appendici
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Passa alla modalità scura"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passa alla modalità scura" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Passa alla modalità chiara"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passa alla modalità chiara" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://stahe.github.io/it-spring-angular1.x-juillet-2014" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Esempio client-server - AngularJS 1.x / Spring 4" class="md-nav__button md-logo" aria-label="Esempio client-server - AngularJS 1.x / Spring 4" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Esempio client-server - AngularJS 1.x / Spring 4
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://stahe.github.io/it-spring-angular1.x-juillet-2014" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Benvenuti
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="introduzione.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introduzione
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="il-server-spring-4.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Il server Spring 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="il-client-angular-js.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Il client Angular JS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="esecuzione-dellapplicazione.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Esecuzione dell'applicazione
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="conclusione.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Conclusione
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Appendici
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="appendici.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Appendici
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61-installazione-di-sts-spring-tool-suite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. Installazione di STS (Spring Tool Suite)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-installazione-di-wampserver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2. Installazione di [ WampServer]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-installazione-di-webstorm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3. Installazione di [WebStorm]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3. Installazione di [WebStorm]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#631-installazione-di-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.1. Installazione di [node.js]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#632-installazione-dello-strumento-bower" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.2. Installazione dello strumento [bower]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#633-installazione-di-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.3. Installazione di [Git]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#634-configurazione-di-webstorm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.4. Configurazione di [WebStorm]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64-installazione-di-un-emulatore-android" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4. Installazione di un emulatore Android
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-installazione-del-plugin-advanced-rest-client-per-chrome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5. Installazione del plugin [Advanced Rest Client] per Chrome
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p><a id="refheading1633352067866943"></a></p>
+<h1 id="6-appendici">6. <span style="color: #365f91">Appendici</span></h1>
+<p><span style="color: #000000">Qui spieghiamo come installare gli strumenti utilizzati in questo documento su macchine Windows 7.</span></p>
+<p><a id="refheading1633372067866943"></a></p>
+<h2 id="61-installazione-di-sts-spring-tool-suite">6.1. <span style="color: #4f81bd">Installazione di STS (Spring Tool Suite)</span></h2>
+<p>Installeremo <strong>SpringSource Tool Suite</strong> [<a href="http://www.springsource.com/developer/sts"><u><span style="color: #0563c1">http://www.springsource.com/developer/sts</span></u></a>], un ambiente Eclipse preconfigurato con numerosi plugin relativi al framework Spring e con una configurazione Maven preinstallata.</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F6000002567E78E13E.png" width="635" height="299" style="display:inline-block; margin:4px;width:16.801cm;height:7.911cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F6000002567E78E13E.png" /></td></tr></table>
+
+<ul>
+  <li>Visita il sito web di <b>SpringSource Tool Suite </b>(STS) [1] per scaricare la versione attuale di STS [2A] [2B].
+  </li>
+</ul>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000054A00000138AB13E318.png" width="677" height="156" style="display:inline-block; margin:4px;width:17.912cm;height:4.128cm;" class="odt-zoomable" data-zoom-src="images/100000000000054A00000138AB13E318.png" /></td></tr></table>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000058D000002813823D2F5.png" width="680" height="307" style="display:inline-block; margin:4px;width:17.999cm;height:8.119cm;" class="odt-zoomable" data-zoom-src="images/100000000000058D000002813823D2F5.png" /></td></tr></table>
+
+<ul>
+  <li>Il file scaricato è un programma di installazione che crea la struttura di directory [3A] [3B]. In [4], avviamo l&#x27;eseguibile,
+  </li>
+  <li>in [5], la finestra dell&#x27;area di lavoro dell&#x27;IDE dopo aver chiuso la finestra di benvenuto. In [6], viene visualizzata la finestra dei server delle applicazioni,
+  </li>
+</ul>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000232000000B1B748A69A.png" width="281" height="89" style="display:inline-block; margin:4px;width:7.435cm;height:2.342cm;" class="odt-zoomable" data-zoom-src="images/1000000000000232000000B1B748A69A.png" /></td></tr></table>
+
+<ul>
+  <li>in [7], la finestra dei server. È registrato un server. Si tratta di un server VMware compatibile con Tomcat.
+  </li>
+</ul>
+
+<p>L&#x27;utilizzo di STS all&#x27;interno dell&#x27;applicazione è spiegato nella sezione<a href="#refheading569771429907001"><u><span style="color: #0563c1"> 1.3.2</span></u></a>.</p>
+<p><a id="refheading78368566070260"></a>
+<a id="wampserver"></a></p>
+<h2 id="62-installazione-di-wampserver">6.2. <span style="color: #4f81bd"><strong>Installazione di [</strong> <strong>WampServer]</strong></span></h2>
+<p>[WampServer] è un pacchetto software per lo sviluppo in PHP/MySQL/Apache su un computer Windows. Lo useremo esclusivamente per il DBMS MySQL.</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000059A000001F194BE71DB.png" width="680" height="236" style="display:inline-block; margin:4px;width:17.999cm;height:6.239cm;" class="odt-zoomable" data-zoom-src="images/100000000000059A000001F194BE71DB.png" /></td></tr></table>
+
+<ul>
+  <li>Sul sito web di [WampServer] [1], scegli la versione appropriata [2],
+  </li>
+  <li>Il file eseguibile scaricato è un programma di installazione. Durante l&#x27;installazione ti verranno richieste diverse informazioni. Queste non riguardano MySQL, quindi puoi ignorarle. Al termine dell&#x27;installazione appare la finestra [3]. Avvia [WampServer],
+  </li>
+</ul>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000027B000001E211C7C2C0.png" width="318" height="241" style="display:inline-block; margin:4px;width:8.401cm;height:6.376cm;" class="odt-zoomable" data-zoom-src="images/100000000000027B000001E211C7C2C0.png" /></td></tr></table>
+
+<ul>
+  <li>in [4], l&#x27;icona di [WampServer] appare nella barra delle applicazioni in basso a destra dello schermo [4],
+  </li>
+  <li>quando si fa clic su di essa, appare il menu [5]. Consente di gestire il server Apache e il DBMS MySQL. Per gestire quest&#x27;ultimo, utilizzare l&#x27;opzione [PhpMyAdmin],
+  </li>
+  <li>che apre la finestra mostrata di seguito,
+  </li>
+</ul>
+
+<p><img src="images/10000000000003C600000186DE03B7E4.png" width="670" height="271" style="width:17.729cm;height:7.158cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003C600000186DE03B7E4.png" /></p>
+<p>Forniremo alcuni dettagli sull&#x27;uso di [PhpMyAdmin]. Nella sezione<a href="#refheading569751429907001"><u><span style="color: #0563c1"> 1.3.1</span></u></a>, mostriamo come utilizzarlo per creare il database dell&#x27;applicazione.</p>
+<p><a id="refheading1633392067866943"></a></p>
+<h2 id="63-installazione-di-webstorm">6.3. <span style="color: #4f81bd">Installazione di [WebStorm]</span></h2>
+<p><span style="color: #000000">[WebStorm] (WS) è l&#x27;IDE di JetBrains per lo sviluppo di applicazioni HTML/CSS/JS. L&#x27;ho trovato perfetto per lo sviluppo di applicazioni Angular. Il sito di download è [</span><a href="http://www.jetbrains.com/webstorm/download/"><u><span style="color: #0563c1">http://www.jetbrains.com/webstorm/download/</span></u></a><span style="color: #000000">]. Si tratta di un IDE a pagamento, ma è disponibile per il download una versione di prova di 30 giorni. Esistono versioni personali e per studenti a prezzi accessibili.</span></p>
+<p><span style="color: #000000">Il suo utilizzo all&#x27;interno dell&#x27;applicazione è descritto nella sezione</span><a href="#refheading1590371672552291"><u><span style="color: #0563c1"> 1.3.3</span></u></a><span style="color: #000000">. Per installare le librerie JS all&#x27;interno di un&#x27;applicazione, WS utilizza uno strumento chiamato [bower]. Questo strumento è un modulo di [node.js], una raccolta di librerie JS. Inoltre, le librerie JS vengono recuperate da un repository Git, il che richiede un client Git sul computer che esegue il download.</span></p>
+<p><a id="refheading1633412067866943"></a></p>
+<h3 id="631-installazione-di-nodejs">6.3.1. <span style="color: #4f81bd">Installazione di [node.js]</span></h3>
+<p><span style="color: #000000">Il sito di download di [node.js] è [</span><a href="http://nodejs.org/"><u><span style="color: #0563c1">http://nodejs.org/</span></u></a><span style="color: #000000">]. Scaricare il programma di installazione ed eseguirlo. Per ora non occorre fare altro.</span></p>
+<p><a id="refheading1633432067866943"></a></p>
+<h3 id="632-installazione-dello-strumento-bower">6.3.2. <span style="color: #4f81bd">Installazione dello strumento [bower]</span></h3>
+<p><span style="color: #000000">Lo strumento [bower], che consente di scaricare librerie JavaScript, può essere installato in diversi modi. Lo installeremo dalla riga di comando:</span></p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span class="odt-code-line-content">C:\Users\Serge Tahé&gt;<span style="color:#ff3333">npm install -g bower</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">C:\Users\Serge Tahé\AppData\Roaming\npm\bower -&gt; C:\Users\Serge Tahé\AppData\Roaming\npm\node_modules\bower\bin\bower</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">bower@1.3.7 C:\Users\Serge Tahé\AppData\Roaming\npm\node_modules\bower</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">├── stringify-object@0.2.1</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">├── is-root@0.1.0</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">├── junk@0.3.0</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">├── insight@0.3.1 (object-assign@0.1.2, async@0.2.10, lodash.debounce@2.4.1, req</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">uest@2.27.0, configstore@0.2.3, inquirer@0.4.1)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">├── mout@0.9.1</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">└── inquirer@0.5.1 (readline2@0.1.0, mute-stream@0.0.4, through@2.3.4, async@0.8</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">.0, lodash@2.4.1, cli-color@0.3.2)</span></span>
+</code></pre></div>
+
+<ul>
+  <li><span style="color: #000000">riga 1: il comando [node.js] che installa il modulo [bower]. Affinché il comando funzioni, l&#x27;eseguibile [npm] deve trovarsi nel PATH del computer (vedi paragrafo seguente);</span>
+  </li>
+</ul>
+<p><a id="refheading1633452067866943"></a></p>
+<h3 id="633-installazione-di-git">6.3.3. <span style="color: #4f81bd">Installazione di [Git]</span></h3>
+<p><span style="color: #000000">Git è un sistema di controllo delle versioni del software. Esiste una versione per Windows chiamata [msysgit] disponibile all&#x27;URL [</span><a href="http://msysgit.github.io/"><u><span style="color: #0563c1">http://msysgit.github.io/</span></u></a><span style="color: #000000">]. Non useremo [msysgit] per gestire le versioni della nostra applicazione, ma semplicemente per scaricare librerie JS presenti su siti come [https://github.com], che richiedono uno speciale protocollo di accesso fornito dal client [msysgit]</span></p>
+<p><span style="color: #000000">La procedura guidata di installazione prevede diversi passaggi, tra cui i seguenti:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001D1000000F3D98AAFA0.png" width="327" height="171" style="display:inline-block; margin:4px;width:8.64cm;height:4.516cm;" class="odt-zoomable" data-zoom-src="images/10000000000001D1000000F3D98AAFA0.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001AE000000E12ECC76E3.png" width="301" height="157" style="display:inline-block; margin:4px;width:7.96cm;height:4.165cm;" class="odt-zoomable" data-zoom-src="images/10000000000001AE000000E12ECC76E3.png" /></td></tr></table>
+
+<p><span style="color: #000000">Per le altre fasi di installazione, è possibile accettare i valori predefiniti forniti.</span></p>
+<p><span style="color: #000000">Una volta installato Git, verificare che l&#x27;eseguibile sia presente nel PATH del computer: [Pannello di controllo / Sistema e sicurezza / Sistema / Impostazioni di sistema avanzate]:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018C000001DAAECF1C48.png" width="277" height="332" style="display:inline-block; margin:4px;width:7.331cm;height:8.775cm;" class="odt-zoomable" data-zoom-src="images/100000000000018C000001DAAECF1C48.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016A000000A2C58A797A.png" width="253" height="113" style="display:inline-block; margin:4px;width:6.699cm;height:2.999cm;" class="odt-zoomable" data-zoom-src="images/100000000000016A000000A2C58A797A.png" /></td></tr></table>
+
+<p><span style="color: #000000">La variabile PATH ha questo aspetto:</span></p>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content">D:\Programs\devjava\java\jdk1.7.0\bin;D:\Programs\ActivePerl\Perl64\site\bin;D:\Programs\ActivePerl\Perl64\bin;D:\Programs\sgbd\OracleXE\app\oracle\product\11.2.0\client;D:\Programs\sgbd\OracleXE\app\oracle\product\11.2.0\client\bin;D:\Programs\sgbd\OracleXE\app\oracle\product\11.2.0\server\bin;...;<span style="color:#ff3333">D:\Programs\javascript\node.js\;D:\Programs\utilitaires\Git\cmd</span></span></span>
+</code></pre></div>
+
+<p><span style="color: #000000">Verificare che:</span></p>
+<ul>
+  <li><span style="color: #000000">il percorso della cartella di installazione di [node.js] sia presente (in questo caso </span><span style="color: #ff3333">D:\Programmi\javascript\node.js</span><span style="color: #000000">);</span>
+  </li>
+  <li><span style="color: #000000">il percorso dell&#x27;eseguibile del client Git sia presente (in questo caso </span><span style="color: #ff3333">D:\Program Files\Utilities\Git\cmd</span><span style="color: #000000">);</span>
+  </li>
+</ul>
+
+<p><a id="refheading1633472067866943"></a></p>
+<h3 id="634-configurazione-di-webstorm">6.3.4. <span style="color: #4f81bd">Configurazione di [WebStorm]</span></h3>
+<p><span style="color: #000000">Controlliamo ora la configurazione di [WebStorm]</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000023F000001D0C3812AD7.png" width="327" height="264" style="display:inline-block; margin:4px;width:8.64cm;height:6.973cm;" class="odt-zoomable" data-zoom-src="images/100000000000023F000001D0C3812AD7.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000139000000EE0387A516.png" width="219" height="166" style="display:inline-block; margin:4px;width:5.791cm;height:4.403cm;" class="odt-zoomable" data-zoom-src="images/1000000000000139000000EE0387A516.png" /></td></tr></table>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005C0000001E973BF0BD5.png" width="680" height="226" style="display:inline-block; margin:4px;width:17.999cm;height:5.98cm;" class="odt-zoomable" data-zoom-src="images/10000000000005C0000001E973BF0BD5.png" /></td></tr></table>
+
+<p><span style="color: #000000">In alto, seleziona l&#x27;opzione [1]. L&#x27;elenco dei moduli [node.js] già installati appare in [2]. Se hai seguito la procedura di installazione precedente, questo elenco dovrebbe contenere solo la riga [3] relativa al modulo [bower].</span></p>
+<p><a id="refheading454551405398942"></a></p>
+<h2 id="64-installazione-di-un-emulatore-android">6.4. <span style="color: #4f81bd">Installazione di un emulatore Android</span></h2>
+<p>Gli emulatori forniti con l&#x27;SDK Android sono lenti, il che ne scoraggia l&#x27;uso. L&#x27;azienda [<a href="http://www.genymotion.com/features/"><u><span style="color: #0563c1">Genymotion</span></u></a>] offre un emulatore molto più potente. È disponibile all&#x27;URL [<a href="https://cloud.genymotion.com/page/launchpad/download/"><u><span style="color: #0563c1">https://cloud.genymotion.com/page/launchpad/download/</span></u></a>] </p>
+<p>(febbraio 2014).</p>
+<p>Dovrai registrarti per ottenere una versione per uso personale. Scarica il prodotto [Genymotion] con la macchina virtuale VirtualBox;</p>
+<p><img src="images/10000000000002D9000000C41915058C.png" width="510" height="137" style="width:13.501cm;height:3.63cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002D9000000C41915058C.png" /></p>
+<p>Installare e quindi avviare [Genymotion]. Successivamente, scaricare un&#x27;immagine per un tablet o un telefono:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005BF000001B52A756CA0.png" width="680" height="202" style="display:inline-block; margin:4px;width:17.999cm;height:5.346cm;" class="odt-zoomable" data-zoom-src="images/10000000000005BF000001B52A756CA0.png" /></td></tr></table>
+
+<ul>
+  <li>in [1], aggiungi un dispositivo virtuale;
+  </li>
+  <li>in [2], scegli uno o più dispositivi da installare. Puoi affinare l&#x27;elenco visualizzato specificando la versione Android desiderata [3] e il modello del dispositivo [4];
+  </li>
+</ul>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000243000001B297AB351B.png" width="290" height="217" style="display:inline-block; margin:4px;width:7.661cm;height:5.741cm;" class="odt-zoomable" data-zoom-src="images/1000000000000243000001B297AB351B.png" /></td></tr></table>
+
+<ul>
+  <li>Una volta completato il download, vedrai [5] un elenco dei dispositivi virtuali disponibili per testare le tue app Android;
+  </li>
+</ul>
+<p><a id="refheading2334521890746156"></a></p>
+<h2 id="65-installazione-del-plugin-advanced-rest-client-per-chrome">6.5. <span style="color: #4f81bd">Installazione del plugin [Advanced Rest Client] per Chrome</span></h2>
+<p>In questo documento utilizziamo il browser <strong>Chrome</strong> di Google (<a href="http://www.google.fr/intl/fr/chrome/browser/"><u><span style="color: #0563c1">http://www.google.fr/intl/fr/chrome/browser/</span></u></a>). Aggiungeremo l&#x27;estensione [<a id="advanced-rest-client"></a> Advanced Rest Client]. Ecco come procedere:</p>
+<ul>
+  <li>Vai al [Google Web Store] (<a href="https://chrome.google.com/webstore"><u><span style="color: #0563c1">https://chrome.google.com/webstore</span></u></a>) utilizzando il browser Chrome;
+  </li>
+  <li>cerca l&#x27;app [Advanced Rest Client]:
+  </li>
+</ul>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001B0000000D21DA44C58.png" width="302" height="147" style="display:inline-block; margin:4px;width:7.999cm;height:3.888cm;" class="odt-zoomable" data-zoom-src="images/10000000000001B0000000D21DA44C58.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+
+<ul>
+  <li>L&#x27;app è quindi disponibile per il download:
+  </li>
+</ul>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003BB000000AE1112526C.png" width="661" height="120" style="display:inline-block; margin:4px;width:17.48cm;height:3.186cm;" class="odt-zoomable" data-zoom-src="images/10000000000003BB000000AE1112526C.png" /></td></tr></table>
+
+<ul>
+  <li>per scaricarla, dovrai creare un account Google. Il [Google Web Store] ti chiederà quindi una conferma [1]:
+  </li>
+</ul>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005A50000025325839F49.png" width="680" height="280" style="display:inline-block; margin:4px;width:17.999cm;height:7.412cm;" class="odt-zoomable" data-zoom-src="images/10000000000005A50000025325839F49.png" /></td></tr></table>
+
+<ul>
+  <li>in [2], l&#x27;estensione aggiunta è disponibile nell&#x27;opzione [App] [3]. Questa opzione appare su ogni nuova scheda che crei (CTRL-T) nel browser.
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
+        </a>
+        <br>
+        Questo tutorial scritto da <strong>Serge Tahé</strong> è reso disponibile al pubblico secondo i termini della
+<em>Creative Commons Attribuzione – Non commerciale –
+Condividi allo stesso modo 3.0 Unported</em>.
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>

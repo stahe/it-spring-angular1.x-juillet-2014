@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://stahe.github.io/it-spring-angular1.x-juillet-2014/sitemap.xml
