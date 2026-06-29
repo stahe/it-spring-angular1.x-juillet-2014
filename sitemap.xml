@@ -2,30 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://stahe.github.io/it-spring-angular1.x-juillet-2014/index.html</loc>
-         <lastmod>2026-05-12</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
-         <loc>https://stahe.github.io/it-spring-angular1.x-juillet-2014/appendici.html</loc>
-         <lastmod>2026-05-12</lastmod>
+         <loc>https://stahe.github.io/it-spring-angular1.x-juillet-2014/allegati.html</loc>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://stahe.github.io/it-spring-angular1.x-juillet-2014/conclusione.html</loc>
-         <lastmod>2026-05-12</lastmod>
-    </url>
-    <url>
-         <loc>https://stahe.github.io/it-spring-angular1.x-juillet-2014/esecuzione-dellapplicazione.html</loc>
-         <lastmod>2026-05-12</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://stahe.github.io/it-spring-angular1.x-juillet-2014/il-client-angular-js.html</loc>
-         <lastmod>2026-05-12</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://stahe.github.io/it-spring-angular1.x-juillet-2014/il-server-spring-4.html</loc>
-         <lastmod>2026-05-12</lastmod>
+         <lastmod>2026-06-29</lastmod>
     </url>
     <url>
          <loc>https://stahe.github.io/it-spring-angular1.x-juillet-2014/introduzione.html</loc>
-         <lastmod>2026-05-12</lastmod>
+         <lastmod>2026-06-29</lastmod>
+    </url>
+    <url>
+         <loc>https://stahe.github.io/it-spring-angular1.x-juillet-2014/utilizzo-dellapplicazione.html</loc>
+         <lastmod>2026-06-29</lastmod>
     </url>
 </urlset>
